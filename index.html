@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>占い館</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b8137569da.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="flex">
+        <div class="left-header flex">
+            <div>
+                <a href="#">
+                    <p class="header-title">占い館</p>
+                </a>
+            </div>
+            <div class="btn-box-diviner">
+                <a href="#" class="btn btn-diviner">占い師の方</a>
+            </div>
+            <input type="search" placeholder=" 検索" class="search">
+        </div>
+        <div class="right-header flex">
+            <div>
+                <a href="#">
+                    <p class="favorite-diviner">♡気になった占い師</p>
+                </a>
+            </div>
+            <div class="btn btn-signup" id="signup-show">新規登録</div>
+            <div class="btn btn-login" id="login-show">ログイン</div>
+        </div>
+    </header>
+
+    <!-- swiper -->
+    <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(./images/bg1.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./images/bg2.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./images/bg3.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./images/bg4.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./images/bg5.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./images/bg6.jpg)"></div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+    <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(./images/bg1.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./images/bg2.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./images/bg3.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./images/bg4.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./images/bg5.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./images/bg6.jpg)"></div>
+        </div>
+    </div>
+
+
+    <div class="login-modal-wrapper" id="login-modal">
+        <div class="modal">
+            <div class="close-modal">
+                <i class="fas fa-times"></i>
+            </div>
+            <div id="login-form">
+                <h3 class="section-title">Emailログイン</h3 class="section-title">
+                <form action="#">
+                    <input class="form-control" type="text" placeholder="メールアドレス">
+                    <input class="form-control" type="password" placeholder="パスワード">
+                    <div id="submit-btn">ログイン</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="signup-modal-wrapper" id="signup-modal">
+        <div class="modal">
+            <div class="close-modal">
+                <i class="fas fa-times"></i>
+            </div>
+            <div id="signup-form">
+                <h3 class="section-title">Emailで新規登録</h3>
+                <form action="#">
+                    <input class="form-control" type="text" placeholder="メールアドレス">
+                    <input class="form-control" type="password" placeholder="パスワード">
+                    <div id="submit-btn">新規登録</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ranking -->
+    <div id="ranking">
+        <div class="container">
+            <h3 class="section-title fadein">ジャンル別ランキング</h3>
+            <div class="table fadein">
+                <table>
+                    <tr class="fadein">
+                        <th>No.1</th>
+                        <td>桜坂 美月</td>
+                        <td>☆4.6</td>
+                        <td>「出会うのが遅かった」と嘆く前にまずは私にその想いをお伝えください。人を愛する気持ちはシンプルです。複雑ではないのに複雑にされてしまう絡み合った恋愛模様。</td>
+                        <td>3,000円～</td>
+                    </tr>
+                    <tr class="fadein">
+                        <th>No.2</th>
+                        <td>桜坂 美月</td>
+                        <td>☆4.6</td>
+                        <td>「出会うのが遅かった」と嘆く前にまずは私にその想いをお伝えください。人を愛する気持ちはシンプルです。複雑ではないのに複雑にされてしまう絡み合った恋愛模様。</td>
+                        <td>3,000円～</td>
+                    </tr>
+                    <tr class="fadein">
+                        <th>No.3</th>
+                        <td>桜坂 美月</td>
+                        <td>☆4.6</td>
+                        <td>「出会うのが遅かった」と嘆く前にまずは私にその想いをお伝えください。人を愛する気持ちはシンプルです。複雑ではないのに複雑にされてしまう絡み合った恋愛模様。</td>
+                        <td>3,000円～</td>
+                    </tr>
+                    <tr class="fadein">
+                        <th>No.4</th>
+                        <td>桜坂 美月</td>
+                        <td>☆4.6</td>
+                        <td>「出会うのが遅かった」と嘆く前にまずは私にその想いをお伝えください。人を愛する気持ちはシンプルです。複雑ではないのに複雑にされてしまう絡み合った恋愛模様。</td>
+                        <td>3,000円～</td>
+                    </tr>
+                    <tr class="fadein">
+                        <th>No.5</th>
+                        <td>桜坂 美月</td>
+                        <td>☆4.6</td>
+                        <td>「出会うのが遅かった」と嘆く前にまずは私にその想いをお伝えください。人を愛する気持ちはシンプルです。複雑ではないのに複雑にされてしまう絡み合った恋愛模様。</td>
+                        <td>3,000円～</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- diviner -->
+    <div id="diviner">
+        <div class="container">
+            <h3 class="section-title fadein">占い師リスト</h3>
+            <div class="diviner-lists flex between fadein">
+                <div class="diviner-list__item imgWrap">
+                    <a href="#">
+                        <img src="images/omid-armin-6G2G.jpg" alt="">
+                        <h4>桜坂美月</h4>
+                        <p>恋愛・結婚</p>
+                    </a>
+                </div>
+                <div class="diviner-list__item imgWrap">
+                    <a href="#">
+                        <img src="images/omid-armin-6G2G.jpg" alt="">
+                        <h4>桜坂美月</h4>
+                        <p>恋愛・結婚</p>
+                    </a>
+                </div>
+                <div class="diviner-list__item imgWrap">
+                    <a href="#">
+                        <img src="images/omid-armin-6G2G.jpg" alt="">
+                        <h4>桜坂美月</h4>
+                        <p>恋愛・結婚</p>
+                    </a>
+                </div>
+                <div class="diviner-list__item imgWrap">
+                    <a href="#">
+                        <img src="images/omid-armin-6G2G.jpg" alt="">
+                        <h4>桜坂美月</h4>
+                        <p>恋愛・結婚</p>
+                    </a>
+                </div>
+                <div class="diviner-list__item imgWrap">
+                    <a href="#">
+                        <img src="images/omid-armin-6G2G.jpg" alt="">
+                        <h4>桜坂美月</h4>
+                        <p>恋愛・結婚</p>
+                    </a>
+                </div>
+            </div>
+            <div class="diviner-lists flex between fadein">
+                <div class="diviner-list__item imgWrap">
+                    <a href="#">
+                        <img src="images/omid-armin-6G2G.jpg" alt="">
+                        <h4>桜坂美月</h4>
+                        <p>恋愛・結婚</p>
+                    </a>
+                </div>
+                <div class="diviner-list__item imgWrap">
+                    <a href="#">
+                        <img src="images/omid-armin-6G2G.jpg" alt="">
+                        <h4>桜坂美月</h4>
+                        <p>恋愛・結婚</p>
+                    </a>
+                </div>
+                <div class="diviner-list__item imgWrap">
+                    <a href="#">
+                        <img src="images/omid-armin-6G2G.jpg" alt="">
+                        <h4>桜坂美月</h4>
+                        <p>恋愛・結婚</p>
+                    </a>
+                </div>
+                <div class="diviner-list__item imgWrap">
+                    <a href="#">
+                        <img src="images/omid-armin-6G2G.jpg" alt="">
+                        <h4>桜坂美月</h4>
+                        <p>恋愛・結婚</p>
+                    </a>
+                </div>
+                <div class="diviner-list__item imgWrap">
+                    <a href="#">
+                        <img src="images/omid-armin-6G2G.jpg" alt="">
+                        <h4>桜坂美月</h4>
+                        <p>恋愛・結婚</p>
+                    </a>
+                </div>
+            </div>
+            <div class="diviner-lists flex between fadein">
+                <div class="diviner-list__item imgWrap">
+                    <a href="#">
+                        <img src="images/omid-armin-6G2G.jpg" alt="">
+                        <h4>桜坂美月</h4>
+                        <p>恋愛・結婚</p>
+                    </a>
+                </div>
+                <div class="diviner-list__item imgWrap">
+                    <a href="#">
+                        <img src="images/omid-armin-6G2G.jpg" alt="">
+                        <h4>桜坂美月</h4>
+                        <p>恋愛・結婚</p>
+                    </a>
+                </div>
+                <div class="diviner-list__item imgWrap">
+                    <a href="#">
+                        <img src="images/omid-armin-6G2G.jpg" alt="">
+                        <h4>桜坂美月</h4>
+                        <p>恋愛・結婚</p>
+                    </a>
+                </div>
+                <div class="diviner-list__item imgWrap">
+                    <a href="#">
+                        <img src="images/omid-armin-6G2G.jpg" alt="">
+                        <h4>桜坂美月</h4>
+                        <p>恋愛・結婚</p>
+                    </a>
+                </div>
+                <div class="diviner-list__item imgWrap">
+                    <a href="#">
+                        <img src="images/omid-armin-6G2G.jpg" alt="">
+                        <h4>桜坂美月</h4>
+                        <p>恋愛・結婚</p>
+                    </a>
+                </div>
+            </div>
+            <div class="btn-box-seeMore fadein">
+                <a class="btn btn-seeMore" href="#">もっと見る</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- column -->
+    <div id="column">
+        <div class="container">
+            <h3 class="section-title fadein">おすすめコラム記事</h3>
+            <div class="column-lists flex between fadein">
+                <div class="column-list">
+                    <div class="column-list__item">
+                        <h3 class="section-title">タロット</h3>
+                        <p>テキストを貼り付けました。テキストを貼り付けました。テキストを貼り付けました。テキストを貼り付けました。</p>
+                    </div>
+                </div>
+                <div class="column-list">
+                    <div class="column-list__item">
+                        <h3 class="section-title">タロット</h3>
+                        <p>テキストを貼り付けました。テキストを貼り付けました。テキストを貼り付けました。テキストを貼り付けました。</p>
+                    </div>
+                </div>
+                <div class="column-list">
+                    <div class="column-list__item">
+                        <h3 class="section-title">タロット</h3>
+                        <p>テキストを貼り付けました。テキストを貼り付けました。テキストを貼り付けました。テキストを貼り付けました。</p>
+                    </div>
+                </div>
+                <div class="column-list">
+                    <div class="column-list__item">
+                        <h3 class="section-title">タロット</h3>
+                        <p>テキストを貼り付けました。テキストを貼り付けました。テキストを貼り付けました。テキストを貼り付けました。</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="overview fadein">
+        <div class="container">
+            <div class="overview-lists fadein">
+                <h4>ジャンル</h4>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+            </div>
+            <div class="overview-lists fadein">
+                <h4>占い師</h4>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+            </div>
+            <div class="overview-lists fadein">
+                <h4>コラム</h4>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+            </div>
+            <div class="overview-lists fadein">
+                <h4>料金別</h4>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+            </div>
+            <div class="overview-lists fadein">
+                <h4>メニュー</h4>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+                <a href="#">テキスト</a>
+            </div>
+            <div class="overview-lists fadein">
+                <h4>オフィシャル</h4>
+                <ul class="icon-lists">
+                    <li class="icon">
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                            <span class="twitter">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                            <span class="facebook">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="#">
+                            <i class="fab fa-line"></i>
+                            <span class="line">LINE</span>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                            <span class="instagram">Instagram</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <small>Copyright 2019 Ara Okada. All Rights Reserved.</small>
+    </footer>
+
+    <!-- TOPへ戻るボタン -->
+    <div id="top-btn">↑</div>
+
+
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+</body>
+
+</html>
